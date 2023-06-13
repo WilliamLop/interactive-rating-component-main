@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="main">
+    <div class="main__content">
+      <section class="card">
+        <div class="card__header">
+          <div class="stars">
+            <img src="images/icon-star.svg" class="star" title="star" alt="icon-star">
+            <img src="images/icon-star.svg" class="star" title="star" alt="icon-star">
+            <img src="images/icon-star.svg" class="star" title="star" alt="icon-star">
+            <img src="images/icon-star.svg" class="star" title="star" alt="icon-star">
+            <img src="images/icon-star.svg" class="star" title="star" alt="icon-star">
+          </div>
+        </div>
+
+        <div class="card__info">
+          <h1 class="card__title">How did we do?</h1>
+          <p class="card__paragraph">
+            Please let us know how we did with your support request. All feedback is appreciated 
+            to help us improve our offering!
+          </p>
+        </div>
+
+        <div class="card__options">
+          <button class="btn" title="1">1</button>
+          <button class="btn" title="2">2</button>
+          <button class="btn" title="3">3</button>
+          <button class="btn" title="4">4</button>
+          <button class="btn" title="5">5</button>
+        </div>
+        <p class="message__error">Por favor selecciona una opción</p>
+
+        <button id="submit" title="Submit" class="submit">Submit</button>
+      </section>
+
+      <section class="card__back hidden">
+        <div class="card__img">
+          <img src="images/illustration-thank-you.svg" alt="illustration-thank-you" title="Thanks you">
+        </div>
+
+        <div class="card__select">
+          <p class="card__description">You selected <span class="rate"></span> out of 5</p>
+        </div>
+
+        <div class="card__message">
+          <h1 class="message__title">Thank you!</h1>
+          <p class="message__paragraph">
+            We appreciate you taking the time to give a rating. If you ever need more support, 
+            don’t hesitate to get in touch!
+          </p>
+        </div>
+        <button id="again" class="submit again">Rate Again</button>
+      </section>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

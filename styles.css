@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --LightGrey: hsl(217, 12%, 63%);
+    --MediumGrey: hsl(216, 12%, 54%);
+    --DarkBlue: hsl(212, 19%, 14%);
+    --VeryDarkBlue: hsl(216, 12%, 8%);
+    --btn: hsla(213, 20%, 18%);
+    --veryDarRed: hsl(355, 59%, 41%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Overpass', sans-serif;
+    font-size: 1em;
+    background-color: var(--VeryDarkBlue);
+}
+
+.main {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.main__content {
+    width: 90%;
+    max-width: 390px;
+
+}
+
+.card {
+    background: var(--DarkBlue);
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+}
+
+.hidden{
+    display: none;
+}
+
+.card__star {
+    padding: .7rem;
+    border-radius: 999px;
+    border: 1px solid var(--Orange);
+}
+
+.stars {
+    display: flex;
+    gap: .7rem;
+}
+
+.star {
+    border: 1px solid var(--Orange);
+    padding: .5rem;
+    border-radius: 999px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card__options .btn.active~.star {
+    opacity: 1;
+}
+
+.message__error{
+    color: var(--veryDarRed);
+    text-align: center;
+    display: none;
+}
+
+
+
+
+.card__title {
+    color: var(--White);
+    margin: 1rem auto;
+}
+
+.card__paragraph {
+    color: var(--LightGrey);
+    font-size: .9em;
+    line-height: 1.6;
+
+}
+
+.card__options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.btn {
+    width: 45px;
+    height: 45px;
+    background-color: var(--btn);
+    border-radius: 50%;
+    padding: 1rem;
+    color: var(--LightGrey);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .7s ease;
+    border: transparent;
+
+}
+
+.btn--error{
+    border: 1px solid var(--veryDarRed);
+}
+
+
+.btn:hover {
+    background-color: var(--Orange);
+    color: var(--White);
+    border: 1px solid var(--Orange);
+
+}
+
+
+.submit {
+    width: 100%;
+    padding: .85rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: var(--Orange);
+    color: var(--White);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: .7s ease;
+
+}
+
+.btn:focus {
+    background-color: var(--LightGrey);
+    color: var(--White);
+
+}
+
+
+.submit:hover {
+    background-color: var(--White);
+    color: var(--Orange);
+}
+
+/* Estilo back */
+
+.card__back {
+    text-align: center;
+    background-color: var(--DarkBlue);
+    padding: 2.3rem .9rem;
+    border-radius: 1rem;
+}
+
+.card__description {
+    background-color: var(--btn);
+    padding: .4rem;
+    border-radius: 2rem;
+    color: var(--Orange);
+    width: 60%;
+    margin: 1rem auto 0 auto;
+}
+
+.message__title {
+    color: var(--White);
+    margin: 1rem auto;
+}
+
+.message__paragraph {
+    color: var(--LightGrey);
+    line-height: 1.6;
+}
+
+
+
+
+.again {
+    margin-top: 1rem;
+}
+
+@media (min-width: 48rem) {
+    .card {
+        border-radius: 1.5rem;
+    }
+}
